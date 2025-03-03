@@ -14,5 +14,6 @@
 # TODO
 [x] Create Orderbook structure
 [ ] Create Limit, Asks, Bids structure
-[ ] Create 
-[] Limit order structures
+[ ] Limit order market making
+[ ] Create market participants
+[ ] Create simulation
