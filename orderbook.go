@@ -13,6 +13,11 @@ type Orderbook struct {
 	BidLimits map(float64) *Limit
 }
 
+type MarketUser struct {
+  Name string
+  Balance int
+}
+
 type Limit struct {
 	Price       float64
 	Orders      []*Order
@@ -69,4 +74,11 @@ func NewOrderBook() *OrderBook {
 		AskLimits: make(map[float64]*Limit),
 		BidLimits: make(map[float64]*Limit),
 	}
+}
+
+func NewMarketUser(number int, balance int) *MarketUser {
+	return &MarketUser {
+    Name: "User_Name_" + iterator,
+    Balance: balance,
+  }
 }
