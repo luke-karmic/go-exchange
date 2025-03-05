@@ -12,7 +12,6 @@ const TRADE_PER_SECOND_RANGE = 5
 
 func main() {
 	// Create Asset with (X) supply (X) USD value
-	// Create an orderbook
 	orderBook := NewOrderBook()
 	participants := []*MarketUser{}
 	for i := 0; i < MARKET_PARTICIPANTS; i++ {
@@ -24,11 +23,13 @@ func main() {
 }
 
 func SimulateTrades(ob *Orderbook, mp []*MarketUser) {
-	for range time.Tick(time.Second * 1) {
+	for range time.Tick(time.Second * TRADE_PER_SECOND_RANGE) {
 		fmt.Println("Foo")
 		fmt.Print(mp)
 		fmt.Print(ob)
 
-		// For every participant, create a bid or ask based on available order inside the order book
+		// For every participant, create realistic bid or ask based on available orders in the order book
+
+		// Print the order from Bid/Ask side, size, number of orders required, the USD value, price impact and spread
 	}
 }
